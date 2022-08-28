@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --Body-color: #022b49;
+  --Card-color: #071a96;
+  --Text-color: #eff6f6;
+  --Hover-color: #2a7849;
+  --Button-Color: #264d26eb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--Body-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heading {
+  color: var(--Text-color);
+  padding: 2rem 2rem;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.TextField {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 5rem;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.Input {
+  width: 27rem;
+  height: 3rem;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Click {
+  position: relative;
+  left: 12.1em;
+  top: -2.2rem;
+  cursor: pointer;
+}
+
+.Card {
+  background-color: var(--Card-color);
+  border: 2px solid blue;
+  word-wrap: break-word;
+  width: 23%;
+  min-height: 3rem;
+  max-height: 10rem;
+  border-radius: 0.5rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.Delete {
+  position: absolute;
+  top: 0.5rem;
+  padding: 0.1rem 0.2rem;
+  left: 86%;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+p {
+  width: 80%;
+  padding: 0.2rem 0.2rem;
+  margin: 0.4rem 0.3rem;
+  color: var(--Text-color);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.Card:hover {
+  background-color: var(--Hover-color);
+  border-color: var(--Hover-color);
+}
+
+.remove {
+  background-color: var(--Button-Color);
+  margin-top: 2rem;
+  padding: 1rem 1rem;
+  width: 10rem;
+  color: var(--Text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  border: var(--Button-Color);
+}
+
+.claim {
+  color: var(--Text-color);
+  margin-left: 46rem;
+  padding: 2rem 2rem;
+  margin-top: 24rem;
+}
+
+@media only screen and (max-width: 60rem) {
+  .heading {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .Input {
+    width: 20rem;
+  }
+
+  .Click {
+    left: 7.1em;
+  }
+
+  .Card {
+    width: 20rem;
+  }
+
+  .Delete {
+    left: 86%;
+  }
+
+  .claim {
+    margin-left: 5%;
   }
 }
